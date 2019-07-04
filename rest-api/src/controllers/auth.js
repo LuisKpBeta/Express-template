@@ -2,7 +2,7 @@ const User = require('../models/User');
 const handleError = require('../util/error');
 
 const { validationResult } = require('express-validator/check');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 exports.signup = (req, res, next) => {
@@ -14,13 +14,7 @@ exports.signup = (req, res, next) => {
   const { email, password } = req.body;
   bcrypt.hash(password, 12)
     .then(hashedPassword => {
-      // const user = new User({
-      //   email: email,
-      //   password: hashedPassword
-      // });
-
       return User.create({ email, password: hashedPassword})
-      //return user.save();
     })
     .then(result => {
       res.status(201).json({ message: 'User Created Successfully.', userId: result._id });
