@@ -16,7 +16,7 @@ To get the Node server running locally:
 
 ## Dependencies
 
-- [expressjs](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
+- [express](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
 - [express-validator](https://github.com/express-validator/express-validator) - For validations on received forms
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - For generating JWTs used by authentication and validations
 - [bcrypt](https://github.com/kelektiv/node.bcrypt.js) - Library to hash passwords
