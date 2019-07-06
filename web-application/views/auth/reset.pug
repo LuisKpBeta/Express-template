@@ -1,0 +1,16 @@
+extends ../layouts/layout
+
+block content
+  .row.mt-5
+    .col-md-6.m-auto
+      .card.card-body
+        h1.text-center.mb-3
+          i.fas.fa-key.pr-2
+          span Reset Password
+        include ../layouts/messages
+        form(action="/reset" method="POST")
+          .form-group
+            label(for="email") Email
+            input#email.form-control(type="email", name="email", placeholder="Enter Email")
+          input(type="hidden", name="_csrf", value=csrfToken)
+          button.btn.btn-primary.btn-block(type="submit") Reset Password

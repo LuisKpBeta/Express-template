@@ -1,0 +1,24 @@
+extends ../layouts/layout
+
+block content
+  .row.mt-5
+    .col-md-6.m-auto
+      .card.card-body
+        h1.text-center.mb-3
+          i.fas.fa-user-plus.pr-2
+          span Register
+        include ../layouts/messages
+        form(action="/signup" method="POST")
+          .form-group
+            label(for="email") Email
+            input#email.form-control(type="email", name="email", placeholder="Enter Email", value=oldInput.email)
+          .form-group
+            label(for="password") Password
+            input#password.form-control(type="password", name="password", placeholder="Create Password", value=oldInput.password)
+          .form-group
+            label(for="confirmPassword") Confirm Password
+            input#confirmPassword.form-control(type="password", name="confirmPassword", placeholder="Confirm Password", value=oldInput.confirmPassword)
+          input(type="hidden", name="_csrf", value=csrfToken)
+          button.btn.btn-primary.btn-block(type="submit") Signup
+        p.lead.mt-4 Have An Account?
+          a(href="/login") Login

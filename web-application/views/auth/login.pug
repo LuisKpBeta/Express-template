@@ -1,0 +1,24 @@
+extends ../layouts/layout
+
+block content
+  .row.mt-5
+    .col-md-6.m-auto
+      .card.card-body
+        h1.text-center.mb-3
+          i.fas.fa-sign-in-alt.pr-2
+          span Login
+        include ../layouts/messages
+        form(action="/login" method="POST")
+          .form-group
+            label(for="email") Email
+            input#email.form-control(type="email", name="email", placeholder="Enter Email")
+          .form-group
+            label(for="password") Password
+            input#password.form-control(type="password", name="password", placeholder="Enter Password")
+          input(type="hidden", name="_csrf", value=csrfToken)
+          button.btn.btn-primary.btn-block(type="submit") Login
+        div.d-flex
+          p.lead.mt-4 No Account?
+            a(href="/signup") Signup
+          p.lead.mt-4.ml-auto Forgot Password?
+            a(href="/reset") Reset Password
