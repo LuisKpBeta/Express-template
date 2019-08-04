@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
-const handleError = require('../util/error');
 
 exports.getIndex = (req, res, next) => {
   res.send('Hello World');
@@ -12,10 +11,7 @@ exports.getRouteAuthenticated = (req, res, next) => {
 }
 
 exports.postRouteWithImage = (req, res, next) => {
-  if (!req.file) {
-    // TODO: Create a middleware for this because if we got here, multer filter was activated and should not come here to throw an error.
-    throw handleError.createError('File extension not supported.', 415);
-  }
+  // Change the name of the variable from filename to image
   const { filename: image } = req.file
 
   // Forces the image to be jpg

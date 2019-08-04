@@ -2,18 +2,33 @@ const multer = require('multer')
 const path = require('path')
 const uuidv4 = require('uuid/v4');
 
+const handleError = require('../util/error');
+
 module.exports = {
-  storage: new multer.diskStorage({
-    destination: path.resolve(__dirname, '..', '..', 'public', 'images'),
-    filename: function (req, file, callback) {
+  dest: path.resolve(__dirname, '..', '..', 'public', 'images'),
+  storage: multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, path.resolve(__dirname, '..', '..', 'public', 'images'))
+    },
+    filename: (req, file, callback) => {
       callback(null, uuidv4() + '_' + file.originalname)
     }
   }),
-  fileFilter: function(req, file, cb) {
-    if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg') {
-      cb(null, true);
+  limits: {
+    fileSize: 2 * 1024 * 1024
+  },
+  fileFilter: (req, file, cb) => {
+    const allowedMimes = [
+      'image/jpeg',
+      'image/jpg',
+      'image/png',
+      'image/gif',
+    ]
+
+    if (allowedMimes.includes(file.mimetype)) {
+      cb(null, true)
     } else {
-      cb(null, false);
+      cb(handleError.createError('File extension not supported.', 415), false)
     }
   }
 }
