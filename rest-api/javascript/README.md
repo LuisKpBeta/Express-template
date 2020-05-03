@@ -1,34 +1,37 @@
-# Express REST API Example
+<h1 align="center">Express - REST API (Javascript)</h1>
+<p align="center">This repository contains an express server with everything configured. Check the list below to see all the features already configured</p>
 
-> ### Example Node (Express + Mongoose) codebase containing simple examples of GET and POST with JWT Authentication.
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+  <a href="linkedin.com/in/filliperomero">
+    <img alt="Made by Fillipe Romero" src="https://img.shields.io/badge/Made%20by-Fillipe%20Romero-blueviolet">
+  </a>
+</p>
+
+<hr />
 
 # Getting started
 
-To get the Node server running locally:
-
-- Clone this repo.
-- `npm install` to install all required dependencies.
-- Install MongoDB or use MongoDB Atlas.
-- Create a nodemon.json (or any env file) with the following environment variables: MONGO_USER, MONGO_PASSWORD, MONGO_DEFAULT_DATABASE, PORT, SECRET_KEY.
-- `npm run dev` to start the local server.
+1. Run `yarn outdated` to check if any dependency should be updated
+2. Create a `.env` file using `.env.example` file as an example
+3. Inside the folder, run `yarn` to install all dependencies
+4. Run `yarn dev` to start the server
 
 # Code Overview
 
 ## Dependencies
 
 - [express](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
-- [express-validator](https://github.com/express-validator/express-validator) - For validations on received forms
+- [yup](https://github.com/jquense/yup) - For validations on received forms
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - For generating JWTs used by authentication and validations
-- [bcrypt](https://github.com/kelektiv/node.bcrypt.js) - Library to hash passwords
+- [bcryptjs](https://github.com/dcodeIO/bcrypt.js) - Library to hash passwords
 - [mongoose](https://github.com/Automattic/mongoose) - For modeling and mapping MongoDB data to javascript
-- [morgan](https://github.com/expressjs/morgan) - Middleware that logs all the HTTP requests
-- [winston](https://github.com/winstonjs/winston) - Simple and universal logging library
 - [compression](https://github.com/expressjs/compression) - Middleware that will compact the JSON response and the entire static files response
 - [cors](https://github.com/expressjs/cors) - Enable cors in the application
 - [helmet](https://github.com/helmetjs/helmet) - Helmet helps you secure your Express apps by setting various HTTP headers
 - [multer](https://github.com/expressjs/multer) - Middleware to handle multipart/form-data, which is primarily used for uploading files
-- [sharp](https://github.com/lovell/sharp) - For resizing image received from client
-- [uuid](https://github.com/kelektiv/node-uuid) - Package used to give unique names for new images received from the client
 
 ## Application Structure
 
