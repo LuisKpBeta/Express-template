@@ -16,10 +16,10 @@
 
 This repository features 4 models to clone
 
-- [**Rest Api (Javascript)**]()
-- **Rest Api (Typescript)** - Comming soon
-- **Web Application (Javascript)** - Outdated
-- **Web Application (Typescript)** - Comming soon
+- [**Rest Api (Javascript)**](https://github.com/filliperomero/express-model/tree/master/rest-api/javascript)
+- [**Rest Api (Typescript)**](https://github.com/filliperomero/express-model/tree/master/rest-api/typescript) - Comming soon
+- [**Web Application (Javascript)**](https://github.com/filliperomero/express-model/tree/master/web-application/javascript) - Outdated
+- [**Web Application (Typescript)**](https://github.com/filliperomero/express-model/tree/master/web-application/typescript) - Comming soon
 
 Inside each model, you will find all informations related in README file.
 
