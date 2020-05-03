@@ -1,5 +1,5 @@
-<h1 align="center">Express Models</h1>
-<p align="center">This repository contains 4 models to start your project with express</p>
+<h1 align="center">Express Templates</h1>
+<p align="center">This repository contains 4 templates to start your project with express</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
@@ -14,24 +14,24 @@
 
 ## Projects
 
-This repository features 4 models to clone
+This repository features 4 templates to clone
 
-- [**Rest Api (Javascript)**](https://github.com/filliperomero/express-model/tree/master/rest-api/javascript)
-- [**Rest Api (Typescript)**](https://github.com/filliperomero/express-model/tree/master/rest-api/typescript) - Comming soon
-- [**Web Application (Javascript)**](https://github.com/filliperomero/express-model/tree/master/web-application/javascript) - Outdated
-- [**Web Application (Typescript)**](https://github.com/filliperomero/express-model/tree/master/web-application/typescript) - Comming soon
+- [**Rest Api (Javascript)**](https://github.com/filliperomero/express-template/tree/master/rest-api/javascript)
+- [**Rest Api (Typescript)**](https://github.com/filliperomero/express-template/tree/master/rest-api/typescript) - Comming soon
+- [**Web Application (Javascript)**](https://github.com/filliperomero/express-template/tree/master/web-application/javascript) - Outdated
+- [**Web Application (Typescript)**](https://github.com/filliperomero/express-template/tree/master/web-application/typescript) - Comming soon
 
-Inside each model, you will find all informations related in README file.
+Inside each template, you will find all informations related in README file.
 
 ## Getting started
 
-1. Clone this repo using `git clone https://github.com/filliperomero/express-model.git`
-2. Move yourself to the appropriate model directory using `cd`
-3. Copy this folder using `cp -R express-model/<rest-api|web-application>/<javascript|typescript> new-folder`
+1. Clone this repo using `git clone https://github.com/filliperomero/express-template.git`
+2. Move yourself to the appropriate template directory using `cd`
+3. Copy this folder using `cp -R express-template/<rest-api|web-application>/<javascript|typescript> new-folder`
 
 ## Comming Soon
 
-All the models in Typescript and an updated version of Web Application
+All the templates in Typescript and an updated version of Web Application
 
 ## License
 
